@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Z.ONE Trader Club | Trading Community</title>
+  <link rel="icon" type="image/png" href="images/zone-logo.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Grain overlay -->
+  <div class="grain-overlay"></div>
+
+  <!-- Floating particles canvas -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- Nav -->
+  <header class="header" id="mainHeader">
+    <div class="container nav">
+      <a href="#home" class="logo">
+        <img src="images/zone-logo.png" alt="Z.ONE Logo" class="nav-logo-img" />
+        <span>Z.ONE Trader Club</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" data-i18n="navHome">Home</a>
+        <a href="#about" data-i18n="navAbout">About</a>
+        <a href="#features" data-i18n="navFeatures">Features</a>
+        <a href="#gallery" data-i18n="navGallery">Gallery</a>
+        <a href="#strategy" data-i18n="navStrategy">Strategy</a>
+        <a href="faq.html" data-i18n="navFaq">FAQ</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="languageToggle" class="lang-btn">中文</button>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero section">
+    <div class="hero-glow hero-glow--1"></div>
+    <div class="hero-glow hero-glow--2"></div>
+    <div class="hero-grid-bg"></div>
+
+    <div class="container hero-content">
+      <div class="hero-text">
+        <p class="eyebrow anim-hero" style="--delay:0">
+          <span class="eyebrow-line"></span>
+          <span data-i18n="heroEyebrow">Learning Community</span>
+        </p>
+
+        <div class="hero-title-row anim-hero" style="--delay:1">
+          <div class="hero-logo-box">
+            <img src="images/zone-logo.png" alt="Z.ONE Logo" class="hero-logo" />
+            <div class="logo-ring"></div>
+          </div>
+          <h1 data-i18n="heroTitle">ZERO TO ONE</h1>
+        </div>
+
+        <div class="hero-subtitle-wrap anim-hero" style="--delay:2">
+          <p class="hero-subtitle" id="rotatingSubtitle">
+            Start from zero. Learn Trading step by step with the community.
+          </p>
+        </div>
+
+        <p class="hero-description anim-hero" style="--delay:3" data-i18n="heroDescription">
+          Z.ONE is a Trading community built for learning, sharing, market updates, and growing together from zero to one.
+        </p>
+
+        <div class="hero-buttons anim-hero" style="--delay:4">
+          <a href="#about" class="btn btn-outline" data-i18n="heroBtnSecondary">
+            <span>Explore Community</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-card anim-hero" style="--delay:3">
+        <div class="hero-card-inner">
+          <div class="card-glow"></div>
+          <p class="card-label" data-i18n="heroCardLabel">What you can expect</p>
+          <ul>
+            <li data-i18n="heroCard1">A Trading environment for beginners, veterans, and working professionals</li>
+            <li data-i18n="heroCard2">Market analysis and sharing</li>
+            <li data-i18n="heroCard3">Systematic courses from beginner to advanced</li>
+            <li data-i18n="heroCard4">A community to grow with</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-hint anim-hero" style="--delay:5">
+      <div class="scroll-hint-line"></div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-title-wrap" data-reveal>
+        <p class="section-tag" data-i18n="aboutTag">About Z.ONE</p>
+        <h2 data-i18n="aboutTitle">A Trading community built around &ldquo;Zero to One&rdquo;</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card glow-card" data-reveal data-reveal-delay="0">
+          <div class="card-number">01</div>
+          <h3 data-i18n="aboutCard1Title">Structured Learning</h3>
+          <p data-i18n="aboutCard1Text">
+            A complete learning path from beginner to advanced — covering MACD, SMC, Price Action and more.
+          </p>
+        </div>
+
+        <div class="about-card glow-card" data-reveal data-reveal-delay="150">
+          <div class="card-number">02</div>
+          <h3 data-i18n="aboutCard2Title">Live Market Analysis</h3>
+          <p data-i18n="aboutCard2Text">
+            Regular market analysis sharing, market structure discussions, and learning to read charts together.
+          </p>
+        </div>
+
+        <div class="about-card glow-card" data-reveal data-reveal-delay="300">
+          <div class="card-number">03</div>
+          <h3 data-i18n="aboutCard3Title">Automated Alerts</h3>
+          <p data-i18n="aboutCard3Text">
+            Bot-powered alerts for key economic data and financial news — so you never miss a market-moving event.
+          </p>
+        </div>
+      </div>
+
+      <div class="about-highlight" data-reveal>
+        <div class="highlight-accent"></div>
+        <h3 data-i18n="aboutHighlightTitle">ZERO TO ONE</h3>
+        <p data-i18n="aboutHighlightText">
+          Even if you have no technical background and no Trading knowledge, Z.ONE is a place where you can begin from zero and build your understanding step by step.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy -->
+  <section id="philosophy" class="section alt-section">
+    <div class="container">
+      <div class="section-title-wrap center" data-reveal>
+        <p class="section-tag" data-i18n="philoTag">Our Philosophy</p>
+        <h2 data-i18n="philoTitle">We don't sell signals. We build traders.</h2>
+        <div class="section-line center"></div>
+      </div>
+
+      <div class="philosophy-content" data-reveal>
+        <div class="philo-block philo-problem">
+          <div class="philo-icon">&#x274C;</div>
+          <p data-i18n="philoProblem">Many traders fall into a cycle — joining one signal group, getting inaccurate signals, switching to the next, and repeating. Losses pile up, no real knowledge is gained, and consistent profitability remains out of reach.</p>
+        </div>
+
+        <div class="philo-divider" data-reveal>
+          <div class="philo-divider-line"></div>
+          <span data-i18n="philoDivider">Z.ONE is different</span>
+          <div class="philo-divider-line"></div>
+        </div>
+
+        <div class="philo-block philo-solution">
+          <div class="philo-icon">&#x2728;</div>
+          <p data-i18n="philoSolution">Z.ONE Trader Club is dedicated to developing self-sufficient traders who can analyze the market independently. This is a community built for learning and growing together.</p>
+        </div>
+
+        <div class="philo-cards">
+          <div class="philo-card glow-card" data-reveal data-reveal-delay="0">
+            <div class="philo-card-icon">&#x1F331;</div>
+            <h3 data-i18n="philoCard1Title">Beginners</h3>
+            <p data-i18n="philoCard1Text">Zero-to-One foundation classes to build your trading knowledge from scratch.</p>
+          </div>
+          <div class="philo-card glow-card" data-reveal data-reveal-delay="150">
+            <div class="philo-card-icon">&#x1F680;</div>
+            <h3 data-i18n="philoCard2Title">Experienced Traders</h3>
+            <p data-i18n="philoCard2Text">Advanced strategy combinations and techniques to level up your trading.</p>
+          </div>
+          <div class="philo-card glow-card" data-reveal data-reveal-delay="300">
+            <div class="philo-card-icon">&#x1F4B0;</div>
+            <h3 data-i18n="philoCard3Title">Second Income or Full-Time</h3>
+            <p data-i18n="philoCard3Text">Whether you want a side income or to become a full-time trader — you're welcome here.</p>
+          </div>
+        </div>
+
+        <div class="philo-mission" data-reveal>
+          <p data-i18n="philoMission">Our mission is to build a like-minded community where traders grow together.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- For Who -->
+  <section class="section alt-section">
+    <div class="container">
+      <div class="section-title-wrap center" data-reveal>
+        <p class="section-tag" data-i18n="forTag">This Community Is For</p>
+        <h2 data-i18n="forTitle">Who should join Z.ONE?</h2>
+        <div class="section-line center"></div>
+      </div>
+
+      <div class="card-grid five-grid">
+        <div class="info-card glow-card" data-reveal data-reveal-delay="0">
+          <div class="icon">1</div>
+          <h3 data-i18n="forCard1Title">Complete beginners</h3>
+          <p data-i18n="forCard1Text">For people starting with zero knowledge.</p>
+        </div>
+        <div class="info-card glow-card" data-reveal data-reveal-delay="100">
+          <div class="icon">2</div>
+          <h3 data-i18n="forCard2Title">People learning Trading basics</h3>
+          <p data-i18n="forCard2Text">Build your foundation step by step.</p>
+        </div>
+        <div class="info-card glow-card" data-reveal data-reveal-delay="200">
+          <div class="icon">3</div>
+          <h3 data-i18n="forCard3Title">Learned but can't apply it</h3>
+          <p data-i18n="forCard3Text">Turn theory into real trading skills with practical guidance.</p>
+        </div>
+        <div class="info-card glow-card" data-reveal data-reveal-delay="300">
+          <div class="icon">4</div>
+          <h3 data-i18n="forCard4Title">People who want to grow together</h3>
+          <p data-i18n="forCard4Text">Learn and exchange ideas with the community.</p>
+        </div>
+        <div class="info-card glow-card" data-reveal data-reveal-delay="400">
+          <div class="icon">5</div>
+          <h3 data-i18n="forCard5Title">Tired of trading alone</h3>
+          <p data-i18n="forCard5Text">No more solo trading — share ideas and grow with like-minded traders.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="section">
+    <div class="container">
+      <div class="section-title-wrap center" data-reveal>
+        <p class="section-tag" data-i18n="featuresTag">Features</p>
+        <h2 data-i18n="featuresTitle">What makes the community useful</h2>
+        <div class="section-line center"></div>
+      </div>
+
+      <div class="card-grid">
+        <div class="feature-card glow-card" data-reveal data-reveal-delay="0">
+          <div class="feature-icon">&#x1F916;</div>
+          <h3 data-i18n="feature1Title">Bot news reminders</h3>
+          <p data-i18n="feature1Text">Get simple reminders for important economic events and market-moving news.</p>
+        </div>
+        <div class="feature-card glow-card" data-reveal data-reveal-delay="100">
+          <div class="feature-icon">&#x1F4DA;</div>
+          <h3 data-i18n="feature2Title">Structured courses</h3>
+          <p data-i18n="feature2Text">Complete courses from beginner to advanced, covering MACD, SMC, Price Action and more.</p>
+        </div>
+        <div class="feature-card glow-card" data-reveal data-reveal-delay="200">
+          <div class="feature-icon">&#x1F50D;</div>
+          <h3 data-i18n="feature3Title">Live market analysis</h3>
+          <p data-i18n="feature3Text">Real-time chart analysis with practical entry and exit breakdowns.</p>
+        </div>
+        <div class="feature-card glow-card" data-reveal data-reveal-delay="300">
+          <div class="feature-icon">&#x1F4C8;</div>
+          <h3 data-i18n="feature4Title">Yearly mid/long-term planning</h3>
+          <p data-i18n="feature4Text">Plan and position for yearly mid-to-long-term market trends together with the community.</p>
+        </div>
+        <div class="feature-card glow-card" data-reveal data-reveal-delay="400">
+          <div class="feature-icon">&#x1F4B0;</div>
+          <h3 data-i18n="feature5Title">Capital management</h3>
+          <p data-i18n="feature5Text">Learn risk control, position sizing, and how to achieve small stop-losses with big rewards.</p>
+        </div>
+        <div class="feature-card glow-card" data-reveal data-reveal-delay="500">
+          <div class="feature-icon">&#x1F4AC;</div>
+          <h3 data-i18n="feature6Title">Community discussion</h3>
+          <p data-i18n="feature6Text">Chat, ask questions, exchange views, and grow together with others.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="section alt-section">
+    <div class="container">
+      <div class="section-title-wrap center" data-reveal>
+        <p class="section-tag" data-i18n="galleryTag">Gallery</p>
+        <h2 data-i18n="galleryTitle">Inside the Discord community</h2>
+        <div class="section-line center"></div>
+      </div>
+
+      <div class="video-showcase" data-reveal>
+        <div class="video-wrap glow-card">
+          <video controls playsinline preload="metadata" poster="">
+            <source src="images/intro-video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <p class="video-caption" data-i18n="videoCaption">A glimpse into our trading community</p>
+      </div>
+
+      <div class="carousel" data-reveal>
+        <button class="carousel-btn prev" id="prevBtn" aria-label="Previous slide">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M12 4L6 10L12 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+
+        <div class="carousel-track">
+          <div class="slide active">
+            <div class="slide-img-wrap">
+              <img src="images/discord-1.png" alt="Discord Screenshot 1" />
+            </div>
+            <p class="slide-description" data-i18n="galleryDesc1">
+              Real-time market discussion and analysis shared in our Discord community.
+            </p>
+          </div>
+
+          <div class="slide">
+            <div class="slide-img-wrap">
+              <img src="images/discord-2.png" alt="Discord Screenshot 2" />
+            </div>
+            <p class="slide-description" data-i18n="galleryDesc2">
+              Bot-powered news alerts keep members informed of key economic events.
+            </p>
+          </div>
+
+          <div class="slide">
+            <div class="slide-img-wrap">
+              <img src="images/discord-3.png" alt="Discord Screenshot 3" />
+            </div>
+            <p class="slide-description" data-i18n="galleryDesc3">
+              Discord Community Show.
+            </p>
+          </div>
+        </div>
+
+        <button class="carousel-btn next" id="nextBtn" aria-label="Next slide">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M8 4L14 10L8 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+
+      <div class="dots" id="dotsContainer">
+        <span class="dot active" data-slide="0"></span>
+        <span class="dot" data-slide="1"></span>
+        <span class="dot" data-slide="2"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Strategy -->
+  <section id="strategy" class="section strategy-section">
+    <div class="strategy-bg-glow"></div>
+    <div class="container">
+      <div class="section-title-wrap center" data-reveal>
+        <p class="section-tag" data-i18n="strategyTag">Z.ONE Strategy</p>
+        <h2 data-i18n="strategyTitle">What you will learn</h2>
+        <div class="section-line center"></div>
+      </div>
+
+      <div class="strategy-grid">
+        <div class="strategy-item glow-card" data-reveal data-reveal-delay="0">
+          <span class="strategy-num">01</span>
+          <span class="strategy-text" data-i18n="strat1">MACD基础理论</span>
+        </div>
+        <div class="strategy-item glow-card" data-reveal data-reveal-delay="50">
+          <span class="strategy-num">02</span>
+          <span class="strategy-text" data-i18n="strat2">MACD运作逻辑</span>
+        </div>
+        <div class="strategy-item glow-card" data-reveal data-reveal-delay="100">
+          <span class="strategy-num">03</span>
+          <span class="strategy-text" data-i18n="strat3">MACD时间周期</span>
+        </div>
+        <div class="strategy-item glow-card" data-reveal data-reveal-delay="150">
+          <span class="strategy-num">04</span>
+          <span class="strategy-text" data-i18n="strat4">SMC聪明钱概念</span>
+        </div>
+        <div class="strategy-item glow-card" data-reveal data-reveal-delay="200">
+          <span class="strategy-num">05</span>
+          <span class="strategy-text" data-i18n="strat5">庄家思维·宏观经济分析</span>
+        </div>
+        <div class="strategy-item glow-card" data-reveal data-reveal-delay="250">
+          <span class="strategy-num">06</span>
+          <span class="strategy-text" data-i18n="strat6">交易的本质</span>
+        </div>
+        <div class="strategy-item glow-card" data-reveal data-reveal-delay="300">
+          <span class="strategy-num">07</span>
+          <span class="strategy-text" data-i18n="strat7">价格行为</span>
+        </div>
+        <div class="strategy-item glow-card" data-reveal data-reveal-delay="350">
+          <span class="strategy-num">08</span>
+          <span class="strategy-text" data-i18n="strat8">FIBO 进阶玩法·必备辅助神器</span>
+        </div>
+        <div class="strategy-item glow-card" data-reveal data-reveal-delay="400">
+          <span class="strategy-num">09</span>
+          <span class="strategy-text" data-i18n="strat9">入门必备指标·必备基础概念</span>
+        </div>
+        <div class="strategy-item glow-card" data-reveal data-reveal-delay="450">
+          <span class="strategy-num">10</span>
+          <span class="strategy-text" data-i18n="strat10">组合策略玩法（中短长线策略）</span>
+        </div>
+        <div class="strategy-item glow-card" data-reveal data-reveal-delay="500">
+          <span class="strategy-num">11</span>
+          <span class="strategy-text" data-i18n="strat11">资金管理思维和滚大本金玩法</span>
+        </div>
+        <div class="strategy-item glow-card" data-reveal data-reveal-delay="550">
+          <span class="strategy-num">12</span>
+          <span class="strategy-text" data-i18n="strat12">抓住趋势行情，波段分析，达到全时间周期交易员</span>
+        </div>
+        <div class="strategy-item strategy-item--highlight glow-card" data-reveal data-reveal-delay="600">
+          <span class="strategy-num">13</span>
+          <span class="strategy-text" data-i18n="strat13">做到小止损大回酬</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo-row">
+          <img src="images/zone-logo.png" alt="Z.ONE Logo" class="footer-logo" />
+          <h3>Z.ONE Trader Club</h3>
+        </div>
+        <p data-i18n="footerText">A Trading community for learning, sharing, and growing from zero to one.</p>
+      </div>
+
+      <div class="footer-faq">
+        <h4 data-i18n="footerFaqTitle">FAQ</h4>
+        <ul>
+          <li><a href="faq.html" data-i18n="faqLink1">Is Z.ONE suitable for beginners?</a></li>
+          <li><a href="faq.html" data-i18n="faqLink3">Is the community on Discord?</a></li>
+          <li><a href="faq.html" data-i18n="faqLink4">What kind of content do you share?</a></li>
+          <li><a href="faq.html" data-i18n="faqLink5">Do you announce class or analysis sessions?</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2025 - 2026 Z.ONE Trader Club</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
